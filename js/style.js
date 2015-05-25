@@ -21,6 +21,15 @@ function redimensionar() {
 	$('#foto').css( "height", heightScreen/2 );
 	
 	$('#foto').css( "cursor", "pointer" );
+    
+    
+    $('#myTab a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+})
+
+    $('#myTab a:first').tab('show') // Select first tab
+
 	}
 	
 window.onresize =  redimensionar;
