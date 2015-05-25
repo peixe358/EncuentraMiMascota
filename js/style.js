@@ -18,6 +18,10 @@ function redimensionar() {
 	$('.carousel').css( "height", heightScreen );
 
 	$('#map-canvas').css( "height", heightScreen/2 );	
+	$('#foto').css( "height", heightScreen/2 );
+	
+	$('#foto').css( "cursor", "pointer" );
 	}
 	
 window.onresize =  redimensionar;
+

@@ -13,8 +13,8 @@
     <meta name="doc-rights" content="Public">
     <link rel="icon" href="img/tumb.png">
 
-    <!--Info-->
-    <title>Tali Escher  |  I do stuff.</title>
+        <!--Info-->
+    <title>Encuentra Mi Mascota ! Pet Perdido !</title>
 
     <!--Google-->
     <meta name="description" content="Hi, I'm Tali Escher. I do stuff.">
@@ -46,14 +46,55 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-md-12"><a href="#myModal" class="" data-toggle="modal" data-target="#myModal"><img src="img/photo.png"></a>
+            <div class="col-md-12">
+				<!-- <a href="#myModal" class="" data-toggle="modal" data-target="#myModal">-->
+					<div id="content">
+						<form>
+							<!-- prompt the user, Camera or Gallery -->
+							<input id="file" type="file" accept="image/*"/>							
+							<!-- open the camera immediately    
+							<input type="file" accept="image/*;capture=camera" />
+							-->                                 
+						</form>
+						<img id="foto" src="img/photo.png" class="img-circle">
+					</div>					
+				<!-- </a>-->
             </div>
         </div>
+		<br>
         <div class="row">
-            <a href="petperdido.html"><div class="col-xs-6 col-sm-3 menuBox text-center">Pet Perdido</div></a>
-            <a href="petencontrado.html"><div class="col-xs-6 col-sm-3 menuBox text-center">Pet Encontrado</div></a>
-            <a href="denuncie.html"><div class="col-xs-6 col-sm-3 menuBox text-center">Denuncie</div></a>
-            <a href="adote.html"><div class="col-xs-6 col-sm-3 menuBox text-center">Adote</div></a>
+            <a href="petperdido.html">
+				<div class="col-xs-12 col-sm-3 text-center">
+					<button type="button" class="btn btn-default btn-primary col-xs-12 btn-lg">
+						<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+						Pet Perdido
+					</button>
+				</div>
+			</a>
+            <a href="petencontrado.html">
+				<div class="col-xs-12 col-sm-3 text-center">
+					<button type="button" class="btn btn-default btn-success col-xs-12 btn-lg">
+						<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+						Pet Encontrado
+					</button>					
+				</div>
+			</a>
+            <a href="denuncie.html">
+				<div class="col-xs-12 col-sm-3 text-center">
+					<button type="button" class="btn btn-default btn-danger col-xs-12 btn-lg">
+						<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+						Denuncie
+					</button>					
+				</div>
+			</a>
+            <a href="adote.html">
+				<div class="col-xs-12 col-sm-3 text-center">
+					<button type="button" class="btn btn-default btn-info col-xs-12 btn-lg">
+						<span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
+						Adote
+					</button>		
+				</div>
+			</a>
         </div>
     </div>
  
@@ -88,6 +129,7 @@
     <script src="js/style.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKAxkFfCt5X53aoZV-OP4Tnt3bZpXz-rs"></script>
     <script src="js/js.js"></script>
+	<script src="js/camera.js"></script>
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
