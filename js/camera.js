@@ -32,13 +32,13 @@ fileChooser.onchange = function (e) {
             img.src = event.target.result;
         }
 
-        // Guess photo orientation based on device orientation, works when taking picture, fails when loading from gallery
+        /* Guess photo orientation based on device orientation, works when taking picture, fails when loading from gallery
         if (navigator.userAgent.match(/mobile/i) && window.orientation === 0) {
             img.height = 250;
             img.className = 'rotate';
         } else {
             img.width = 400;
-        }
+        }*/
 
         //content.innerHTML = '';
         //content.appendChild(img);
