@@ -8,6 +8,7 @@ $(document).ready(function() {
 	$('.carousel-caption').css( "padding-bottom", '20%' );
 		
     });
+
 	
 function redimensionar() {
 
@@ -28,7 +29,7 @@ function redimensionar() {
     $(this).tab('show')
 })
 
-    $('#myTab a:first').tab('show') // Select first tab
+    $('#myTab a:first').tab('show')
 
 	}
 	
