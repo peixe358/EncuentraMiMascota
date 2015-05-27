@@ -14,7 +14,7 @@
     <link rel="icon" href="img/tumb.png">
 
         <!--Info-->
-    <title>Encuentra Mi Mascota | Pet Perdido |</title>
+    <title>Encuentra Mi Mascota ! Pet Perdido !</title>
 
     <!--Google-->
     <meta name="description" content="Hi, I'm Tali Escher. I do stuff.">
@@ -43,75 +43,87 @@
 </head>
 
 <body  ng-app="myApp" ng-controller="userCtrl">
-    
+
     <div class="container">
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-				<!-- <a href="#myModal" class="" data-toggle="modal" data-target="#myModal">-->
-					<div id="content">
-						<form>
-							<!-- prompt the user, Camera or Gallery -->
-							<input id="file" type="file" accept="image/*" style="display: none;"/>							
-							<!-- open the camera immediately    
-							<input type="file" accept="image/*;capture=camera" />
-							-->                                 
-						</form>
-						<img id="foto" src="img/photo.png" class="center-block" >
-					</div>					
-				<!-- </a>-->
+        <!-- <a href="#myModal" class="" data-toggle="modal" data-target="#myModal">-->
+          <div id="content">
+            <form>
+              <!-- prompt the user, Camera or Gallery -->
+              <input id="file" type="file" accept="image/*" style="display: none;"/>
+              <!-- open the camera immediately
+              <input type="file" accept="image/*;capture=camera" />
+              -->
+            </form>
+            <img id="foto" src="img/photo.png" class="center-block" >
+          </div>
+        <!-- </a>-->
             </div><div class="col-md-4"></div>
         </div>
-		<br>
+    <br>
 
-<!--início do formulário HUE BR BR BR-->        
+<!--início do formulário HUE BR BR BR-->
 <div class="container">
     <div class="row">
     <div class="col-md-12">
     <ul id="myTab" class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#info" id="home-tab" role="tab" data-toggle="tab" aria-controls="info" aria-expanded="true"><div class="glyphicon glyphicon-menu-hamburger"></div></a></li>
-      <li role="presentation" class=""><a href="#place" role="tab" id="tab" data-toggle="tab" aria-controls="place" aria-expanded="false"><div class="glyphicon glyphicon-map-marker"></div></a></li>
-      <li role="presentation" class=""><a href="#time" role="tab" id="tab" data-toggle="tab" aria-controls="time" aria-expanded="false"><div class="glyphicon glyphicon-time"></div></a></li>
+      <li role="presentation" class="active"><a href="#info" id="home-tab" role="tab" data-toggle="tab" aria-controls="info" aria-expanded="true"><div class="glyphicon glyphicon-menu-hamburger"></div> Geral</a></li>
+      <li role="presentation" class=""><a href="#place" role="tab" id="tab" data-toggle="tab" aria-controls="place" aria-expanded="false"><div class="glyphicon glyphicon-map-marker"></div> Localização</a></li>
+      <li role="presentation" class=""><a href="#time" role="tab" id="tab" data-toggle="tab" aria-controls="time" aria-expanded="false"><div class="glyphicon glyphicon-time"></div> Data</a></li>
     </ul>
     <div id="myTabContent" class="tab-content">
       <div role="tabpanel" class="tab-pane fade active in" id="info" aria-labelledby="home-tab">
-          <form>
-      <div class="form-group">
-        </br>
-        <input type="text" class="form-control" placeholder="Species">
+        <form>
+          <div class="form-group">
+            </br>
+            <select class="form-control">
+              <option disabled selected>Espécie</option>
+              <option value="gato">Gato</option>
+              <option value="cachorro">Cachorro</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="radio-inline">
+              <input type="radio" name="radio-genero" name="optionsRadios" id="radio-macho" value="macho">Macho
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="radio-genero" name="optionsRadios" id="radio-femea" value="femea">Fêmea
+            </label>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Raça">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Descrição">
+          </div>
+          <a type="button" class="btn btn-default btn-next" href="#info">Próximo</a>
+        </form>
       </div>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Gender">
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Breed">
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Description">
-      </div>
-          <a type="button" class="btn btn-primary" href="parabens.html">Submit</a>
-          </form>
-      </div>
-        
+
       <div role="tabpanel" class="tab-pane fade" id="place" aria-labelledby="profile-tab">
-        </br><textarea class="form-control" rows="3"></textarea>
-        <a type="button" class="btn btn-primary" href="parabens.html">Submit</a>
+        <h3>PORQUE NÃO TEM UM MAPA AQUI?</h3>
+        </br>
+        <a type="button" class="btn btn-default btn-next" href="parabens.html">Próximo</a>
       </div>
       <div role="tabpanel" class="tab-pane fade" id="time" aria-labelledby="profile-tab">
         <div class="form-group">
         </br>
-        <input type="text" class="form-control" placeholder="Date">
+        <input type="text" class="form-control" placeholder="Data">
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Time">
+        <input type="text" class="form-control" placeholder="Hora">
     </div></br>
-        <a type="button" class="btn btn-primary" href="parabens.html">Submit</a>
+    <a type="button" class="btn btn-primary" href="parabens.html">Finalizado</a>
       </div>
     </div>
     </div>
-    </div> 
+    </div>
 </div>
 </div>
+
 
 <!---------------- js ---------------->
 
@@ -120,7 +132,7 @@
     <script src="js/style.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKAxkFfCt5X53aoZV-OP4Tnt3bZpXz-rs"></script>
     <script src="js/js.js"></script>
-	<script src="js/camera.js"></script>
+  <script src="js/camera.js"></script>
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 

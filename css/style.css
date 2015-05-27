@@ -18,3 +18,11 @@ body {
 .imgbox {
     width: 100%;
 }
+
+.main-button {
+  margin-bottom: 10px;
+}
+
+.main-button > button > .glyphicon {
+  float: left;
+}
