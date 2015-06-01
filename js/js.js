@@ -16,3 +16,16 @@
           }, 1000);
       }
       google.maps.event.addDomListener(window, 'load', initialize);
+
+// https://eonasdan.github.io/bootstrap-datetimepicker/
+
+    $(function () {
+        $('.datetimepicker-date').datetimepicker({
+          format: 'DD/MM/YYYY',
+          locale: 'pt-BR'
+        });
+        $('.datetimepicker-time').datetimepicker({
+          format: 'LT',
+          locale: 'pt-BR'
+        });
+    });

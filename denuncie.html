@@ -14,7 +14,7 @@
     <link rel="icon" href="img/tumb.png">
 
         <!--Info-->
-    <title>Encuentra Mi Mascota | Denuncie |</title>
+    <title>Encuentra Mi Mascota ! Denuncie !</title>
 
     <!--Google-->
     <meta name="description" content="Hi, I'm Tali Escher. I do stuff.">
@@ -34,6 +34,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/carousel.css" rel="stylesheet">
     <link href="lib/bootstrap-3.3.4-dist/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -42,70 +43,115 @@
     <![endif]-->
 </head>
 
-<body>
+<body  ng-app="myApp" ng-controller="userCtrl">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+        <!-- <a href="#myModal" class="" data-toggle="modal" data-target="#myModal">-->
+          <div id="content">
+            <form>
+              <!-- prompt the user, Camera or Gallery -->
+              <input id="file" type="file" accept="image/*" style="display: none;"/>
+              <!-- open the camera immediately
+              <input type="file" accept="image/*;capture=camera" />
+              -->
+            </form>
+            <img id="foto" src="img/photo.png" class="center-block" >
+          </div>
+        <!-- </a>-->
+            </div><div class="col-md-4"></div>
+        </div>
+    <br>
+
+<!--início do formulário HUE BR BR BR-->
 <div class="container">
-    <div class="row">
-            <div class="col-md-12">
-            <div id="map-canvas" class="img-responsive center-block"></div>
-        </div></br>
-    </div>
-    
     <div class="row">
     <div class="col-md-12">
     <ul id="myTab" class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#info" id="home-tab" role="tab" data-toggle="tab" aria-controls="info" aria-expanded="true"><div class="glyphicon glyphicon-menu-hamburger"></div></a></li>
-      <li role="presentation" class=""><a href="#contact" role="tab" id="tab" data-toggle="tab" aria-controls="place" aria-expanded="false"><div class="glyphicon glyphicon glyphicon-envelope"></div></a></li>
-      <li role="presentation" class=""><a href="#time" role="tab" id="tab" data-toggle="tab" aria-controls="time" aria-expanded="false"><div class="glyphicon glyphicon-time"></div></a></li>
+      <li role="presentation" class="active"><a href="#info" id="home-tab" role="tab" data-toggle="tab" aria-controls="info" aria-expanded="true"><div class="glyphicon glyphicon-menu-hamburger"></div> Geral</a></li>
+      <li role="presentation" class=""><a href="#place" role="tab" id="tab" data-toggle="tab" aria-controls="place" aria-expanded="false"><div class="glyphicon glyphicon-map-marker"></div> Localização</a></li>
+      <li role="presentation" class=""><a href="#time" role="tab" id="tab" data-toggle="tab" aria-controls="time" aria-expanded="false"><div class="glyphicon glyphicon-time"></div> Data</a></li>
     </ul>
     <div id="myTabContent" class="tab-content">
+      <!-- GERAL -->
       <div role="tabpanel" class="tab-pane fade active in" id="info" aria-labelledby="home-tab">
-          <form>
-      <div class="form-group">
+        <form>
+          <div class="form-group">
+            </br>
+            <select class="form-control">
+              <option disabled selected>Espécie</option>
+              <option value="gato">Gato</option>
+              <option value="cachorro">Cachorro</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="radio-inline">
+              <input type="radio" name="radio-genero" name="optionsRadios" id="radio-macho" value="macho">Macho
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="radio-genero" name="optionsRadios" id="radio-femea" value="femea">Fêmea
+            </label>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Raça">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Descrição">
+          </div>
+          <a type="button" class="btn btn-default btn-next" href="#info">Próximo</a>
+        </form>
+      </div>
+
+      <!-- LOCALIZACAO -->
+      <div role="tabpanel" class="tab-pane fade" id="place" aria-labelledby="profile-tab">
+        <h3>PORQUE NÃO TEM UM MAPA AQUI?</h3>
         </br>
-        <input type="text" class="form-control" placeholder="Species">
+        <a type="button" class="btn btn-default btn-next" href="parabens.html">Próximo</a>
       </div>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Gender">
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Breed">
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Description">
-      </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-          </form>
-      </div>
-        
-      <div role="tabpanel" class="tab-pane fade" id="contact" aria-labelledby="profile-tab">
-        </br><textarea class="form-control" rows="3" placeholder="Have you tried contact with the agressor? Tell us what happened"></textarea>
-        </br><button type="submit" class="btn btn-default">Submit</button>
-      </div>
+
+      <!-- DATA -->
       <div role="tabpanel" class="tab-pane fade" id="time" aria-labelledby="profile-tab">
         <div class="form-group">
+          </br>
+          <div class='input-group date datetimepicker-date'>
+              <input type='text' class="form-control" placeholder="Data"/>
+              <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class='input-group date datetimepicker-time'>
+            <input type='text' class="form-control" placeholder="Hora"/>
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-time"></span>
+            </span>
+          </div>
+        </div>
         </br>
-        <input type="text" class="form-control" placeholder="Date">
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Time">
-    </div></br>
-    <button type="submit" class="btn btn-default">Submit</button>
+        <a type="button" class="btn btn-primary" href="parabens.html">Finalizado</a>
       </div>
     </div>
     </div>
-    </div> 
+    </div>
+</div>
 </div>
 
-<!---------------- js ---------------->
+
+<!--                                    js                                   -->
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="lib/bootstrap-3.3.4-dist/js/bootstrap.js"></script>
+    <script src="js/moment-with-locales.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
     <script src="js/style.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKAxkFfCt5X53aoZV-OP4Tnt3bZpXz-rs"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKAxkFfCt5X53aoZV-OP4Tnt3bZpXz-rs" type="text/javascript"></script>
     <script src="js/js.js"></script>
-	<script src="js/camera.js"></script>
+    <script src="js/camera.js"></script>
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-
   </body>
 </html>
