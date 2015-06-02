@@ -45,7 +45,47 @@
 
 <body  ng-app="myApp" ng-controller="userCtrl">
 
+<!-- NAVBAR -->
     <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-toggle navbar-left" href="main.html"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="navbar-brand" href="#">EncuentraMiMascota</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pet Encontrado <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="petencontrado.html">Cadastrar</a></li>
+                  <li><a href="#">Visualizar</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pet Perdido <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="petperdido.html">Cadastrar</a></li>
+                  <li><a href="#">Visualizar</a></li>
+                </ul>
+              </li>
+              <li><a href="denuncie.html">Denuncie</a></li>
+              <li><a href="adote.html">Adote</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+<!-- /NAVBAR -->
+
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4">
@@ -58,7 +98,7 @@
               <input type="file" accept="image/*;capture=camera" />
               -->
             </form>
-            <img id="foto" src="img/photo.png" class="center-block" >
+            <img id="foto" src="img/photo.png" class="center-block" style="height: 100px">
           </div>
         <!-- </a>-->
             </div><div class="col-md-4"></div>
@@ -99,7 +139,7 @@
             <input type="text" class="form-control" placeholder="Raça">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Descrição">
+            <textarea class="form-control" rows="4" placeholder="Descrição"></textarea>
           </div>
           <a type="button" class="btn btn-default btn-next" href="#info">Próximo</a>
         </form>
@@ -107,8 +147,11 @@
 
       <!-- LOCALIZACAO -->
       <div role="tabpanel" class="tab-pane fade" id="place" aria-labelledby="profile-tab">
-        <h3>PORQUE NÃO TEM UM MAPA AQUI?</h3>
-        </br>
+        <div class="row">
+            <div class="col-md-12">
+            <div id="map-canvas" class="img-responsive center-block"></div>
+            </div>
+        </div>
         <a type="button" class="btn btn-default btn-next" href="parabens.html">Próximo</a>
       </div>
 
@@ -149,6 +192,7 @@
     <script src="js/bootstrap-datetimepicker.min.js"></script>
     <script src="js/style.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKAxkFfCt5X53aoZV-OP4Tnt3bZpXz-rs" type="text/javascript"></script>
+    <script src="js/app.js"></script>
     <script src="js/js.js"></script>
     <script src="js/camera.js"></script>
     <script src="js/ie10-viewport-bug-workaround.js"></script>

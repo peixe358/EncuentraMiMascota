@@ -26,3 +26,9 @@ body {
 .main-button > button > .glyphicon {
   float: left;
 }
+
+.navbar-left {
+    float:left;
+    margin-left:15px;
+    padding:6px 10px;
+}
